@@ -1,0 +1,33 @@
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
+############################################################
+# JetBrains IDEs: IntelliJ
+############################################################
+
+*.iml
+*.ipr
+*.iws
+
+.idea/
+out/
+target/
+
+############################################################
+# Gradle ignore defaults (https://github.com/github/gitignore/blob/master/Gradle.gitignore)
+############################################################
+.gradle
+build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+############################################################
+# Project specific ignore rules
+*.log
+
+

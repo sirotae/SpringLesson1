@@ -16,9 +16,5 @@ public class Example2Main {
         MessageRenderer mr1 = ctx.getBean(MessageRenderer.class);
         mr1.render();
 
-        // check singleton scope
-        MessageRenderer mr2 = ctx.getBean(MessageRenderer.class);
-
-        System.out.println(mr1==mr2);
     }
 }

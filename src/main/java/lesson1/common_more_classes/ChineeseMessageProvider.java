@@ -4,7 +4,7 @@ import lesson1.common_interfaces.MessageProvider;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ChineseMessageProvider implements MessageProvider {
+public class ChineeseMessageProvider implements MessageProvider {
 
     @Override
     public String getMessage() {

@@ -2,7 +2,7 @@ package lesson1.example3_factorybean;
 
 import lesson1.common_interfaces.MessageRenderer;
 import lesson1.common_classes.StandardOutMessageRenderer;
-import lesson1.common_more_classes.ChineseMessageProvider;
+import lesson1.common_more_classes.ChineeseMessageProvider;
 import lesson1.common_more_classes.EnglishMessageProvider;
 import org.springframework.beans.factory.FactoryBean;
 
@@ -17,7 +17,7 @@ public class MessageRendererFactoryBean implements FactoryBean<MessageRenderer> 
         switch(language) {
             case "EN": messageRenderer.setMessageProvider(new EnglishMessageProvider());
                 break;
-            case "CH": messageRenderer.setMessageProvider(new ChineseMessageProvider());
+            case "CH": messageRenderer.setMessageProvider(new ChineeseMessageProvider());
                 break;
         }
         return messageRenderer;

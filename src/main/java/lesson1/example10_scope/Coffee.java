@@ -1,4 +1,4 @@
-package lesson1.example9_scope;
+package lesson1.example10_scope;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;

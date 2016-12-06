@@ -1,7 +1,10 @@
 package lesson1.example5_primary;
 
 import lesson1.common_classes.StandardOutMessageRenderer;
+import lesson1.common_interfaces.MessageProvider;
 import lesson1.common_interfaces.MessageRenderer;
+import lesson1.common_more_classes.ChineeseMessageProvider;
+import lesson1.common_more_classes.EnglishMessageProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 
@@ -11,13 +14,13 @@ public class Example5Main {
 
     @Bean
     @Primary
-    public String getMessage() {
-        return "primary message";
+    public MessageProvider getChineese() {
+        return new ChineeseMessageProvider();
     }
 
     @Bean
-    public String getOtherMessage() {
-        return "this is other message...";
+    public MessageProvider getEnglish() {
+        return new EnglishMessageProvider();
     }
 
     @Bean

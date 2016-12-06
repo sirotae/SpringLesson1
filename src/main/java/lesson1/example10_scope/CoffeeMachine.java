@@ -1,15 +1,12 @@
-package lesson1.example10_lifecycle;
+package lesson1.example10_scope;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
 @Component
 @Scope(BeanDefinition.SCOPE_SINGLETON)
-public class SmartCoffeeMachine {
+public class CoffeeMachine {
 
     private long serialNr;
 
@@ -19,15 +16,5 @@ public class SmartCoffeeMachine {
 
     public void setSerialNr(long serialNr) {
         this.serialNr = serialNr;
-    }
-
-    @PostConstruct
-    public void init() {
-        System.out.println("check on startup");
-    }
-
-    @PreDestroy
-    public void destroy() {
-        System.out.println("clean on shutdown");
     }
 }

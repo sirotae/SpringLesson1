@@ -1,16 +1,17 @@
-package lesson1.example9_scope;
+package lesson1.example10_scope;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("lesson1.example9_scope")
+@ComponentScan("lesson1.example10_scope")
 public class Main {
     public static void main(String... args) throws InterruptedException {
         ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
 
         CoffeeMachine machine = context.getBean(CoffeeMachine.class);
         machine.setSerialNr(11111);
+        System.out.println("Coffee machine serial No: " + machine.getSerialNr());
 
         machine = context.getBean(CoffeeMachine.class);
         System.out.println("Coffee machine serial No: " + machine.getSerialNr());

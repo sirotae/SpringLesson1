@@ -25,9 +25,9 @@ public class Example3Main {
         MessageRendererFactoryBean factoryBean = ctx.getBean(MessageRendererFactoryBean.class);
 
         try {
-            // get singleton object managed by Spring IoC container
             MessageRenderer mr = factoryBean.getObject();
             mr.render();
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

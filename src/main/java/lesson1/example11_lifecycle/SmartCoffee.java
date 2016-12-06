@@ -1,4 +1,4 @@
-package lesson1.example10_lifecycle;
+package lesson1.example11_lifecycle;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
@@ -24,11 +24,11 @@ public class SmartCoffee {
 
     @PostConstruct
     public void init() {
-        System.out.println("call on mobile phone that coffee is ready");
+        System.out.println("Coffee post-construct: call on mobile phone that coffee is ready");
     }
 
     @PreDestroy
     public void destroy() {
-        System.out.println("ping cleaner to clean a cup");
+        System.out.println("Coffee pre-destroy: ping cleaner to clean a cup");
     }
 }

@@ -1,15 +1,15 @@
-package lesson1.example8_gracefulshutdown;
+package lesson1.example9_gracefulshutdown;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"lesson1.common_interfaces", "lesson1.common_classes", "lesson1.example8_gracefulshutdown"})
-public class Example8Main2 {
+@ComponentScan(basePackages = {"lesson1.common_interfaces", "lesson1.common_classes", "lesson1.example9_gracefulshutdown"})
+public class Main2 {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(Example8Main2.class);
+        ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(Main2.class);
 
         Runtime.getRuntime().addShutdownHook(new ShutdownHook(ctx));
 
